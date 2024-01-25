@@ -22,6 +22,7 @@ export default function Home() {
       console.log(returnToAppLink.current)
       console.log(window.location.protocol + "//" + window.location.host)
       timeoutTimer = setTimeout(() => {
+        openDeepLink(returnToAppLink.current, { onOpen: console.log, onFail: console.error });
         openDeepLink(url, { onOpen: console.log, onFail: console.error });
       }, 1000);
     }
@@ -31,7 +32,7 @@ export default function Home() {
 
   useEffect(() => {
     if ('registerProtocolHandler' in navigator) {
-      navigator.registerProtocolHandler('web+bidsee', 'http://localhost:3000/?url=%s', 'Bidsee');
+      navigator.registerProtocolHandler('web+bidsee', 'https://im-trying-something.vercel.app/?url=%s', 'Title');
     }
   }, []);
 
