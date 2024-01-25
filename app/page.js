@@ -20,8 +20,9 @@ export default function Home() {
 
       setTimeout(() => {
         if (!change) { 
-          var redirectURL = "localhost:3000/x"
+          var redirectURL = "https://im-trying-something.vercel.app/"
           window.location = redirectURL
+          return
         }
       }, 3000)
 
