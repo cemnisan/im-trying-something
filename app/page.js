@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
  
 export default function Home() {
-  const [isInstagram, setIsInstagram] = useState(true)
+  const [isInstagram, setIsInstagram] = useState(false)
   
   useEffect(() => {
     let _isInstagram = document.referrer.includes("instagram")
@@ -20,7 +20,7 @@ export default function Home() {
 
       setTimeout(() => {
         if (!change) { 
-          var redirectURL = "localhost:3000/"
+          var redirectURL = "localhost:3000/x"
           window.location = redirectURL
         }
       }, 3000)
