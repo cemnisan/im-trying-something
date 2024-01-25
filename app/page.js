@@ -45,6 +45,7 @@ export default function Home() {
   return (
     <div>
       <p>Is user coming from instagram? {`${isInstagram}`} </p>
+      {deneme()}
     </div>
   )
 }
