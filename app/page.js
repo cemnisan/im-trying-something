@@ -14,7 +14,7 @@ export default function Home() {
 
   function deneme() { 
     if (isInstagram) { 
-      var newURL = window.location.href.replace('https://im-trying-something.vercel.app/', 'bidsee://deneme?q=123')
+      var newURL = window.location.href.replace('https://', 'bidsee://')
       window.location.replace(newURL) 
       /*var change = false */
 
