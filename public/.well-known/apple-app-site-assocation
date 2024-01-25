@@ -1,0 +1,17 @@
+{
+   "applinks": {
+     "apps": [],
+     "details": [
+       {
+         "appID": "9AU2562GU2.com.alsay.bidsee",
+         "paths": [
+           "/*",
+           "/stream/*",
+           "/profile/*",
+           "/online-auction/*",
+           "/product/*"
+         ]
+       }
+     ]
+   }
+ }
