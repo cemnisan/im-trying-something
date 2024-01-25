@@ -8,6 +8,7 @@ export default function Home() {
   useEffect(() => {
     let _isInstagram = navigator.userAgent.includes("instagram")
     console.log(window.location.href)
+    console.log(document.referrer)
     setIsInstagram(true)
   })
 
