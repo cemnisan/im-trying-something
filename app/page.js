@@ -15,7 +15,7 @@ export default function Home() {
   function deneme() { 
     if (isInstagram) { 
       var newURL = window.location.href.replace('https://', 'bidsee://')
-      window.location = "bidsee://bidsee.app/?screen=xxx"
+      window.location = "com.alsay.bidsee://"
       /*var change = false */
 
       /*setTimeout(() => {
