@@ -6,10 +6,10 @@ export default function Home() {
   const [isInstagram, setIsInstagram] = useState(true)
   
   useEffect(() => {
-    let _isInstagram = navigator.userAgent.includes("instagram")
+    let _isInstagram = document.referrer.includes("instagram")
     console.log(window.location.href)
-    console.log(document.referrer)
-    setIsInstagram(true)
+    console.log(document.referrer.includes("instagram"))
+    setIsInstagram(_isInstagram)
   })
 
   function deneme() { 
@@ -25,7 +25,7 @@ export default function Home() {
         }
       }, 3000)
 
-      var newURL = window.location.href.replace('localhost:3000/', 'localhost:3000/.well-known/apple-app-site-assocation')
+      var newURL = window.location.href.replace('https://im-trying-something.vercel.app/', 'https://im-trying-something.vercel.app/.well-known/apple-app-site-assocation')
       window.location.replace(newURL)
 
 
