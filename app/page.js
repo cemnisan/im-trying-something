@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react'
  
 export default function Home() {
-  const [isInstagram, setIsInstagram] = useState(false)
+  const [isInstagram, setIsInstagram] = useState(true)
   
   useEffect(() => {
     let _isInstagram = navigator.userAgent.includes("instagram")
-    console.log(navigator.userAgent)
-    setIsInstagram(_isInstagram)
+    console.log(window.location.href)
+    setIsInstagram(true)
   })
 
   function deneme() { 
@@ -44,7 +44,6 @@ export default function Home() {
   return (
     <div>
       <p>Is user coming from instagram? {`${isInstagram}`} </p>
-      { deneme() }
     </div>
   )
 }
