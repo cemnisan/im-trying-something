@@ -3,19 +3,28 @@
 import { useEffect, useState } from 'react'
  
 export default function Home() {
-  const [isInstagram, setIsInstagram] = useState(false)
+  const [isInstagram, setIsInstagram] = useState(true)
   
   useEffect(() => {
     let _isInstagram = document.referrer.includes("instagram")
     console.log(window.location.href)
     console.log(document.referrer.includes("instagram"))
-    setIsInstagram(_isInstagram)
+    setIsInstagram(true)
   })
+
+  function startIThrown(){
+    document.location = 'com.alsay.bidsee://';
+    setTimeout(function(){
+      if(confirm('You do not seem to have iThrown installed, do you want to go download it now?')){
+        document.location = 'https://beta.bidsee.app';
+      }
+    }, 300);
+  }
 
   function deneme() { 
     if (isInstagram) { 
-      var newURL = window.location.href.replace('https://', 'bidsee://')
-      window.location = "com.alsay.bidsee://"
+      /*var newURL = window.location.href.replace('https://', 'bidsee://')*/
+      window.location.replace("com.alsay.bidsee://")
       /*var change = false */
 
       /*setTimeout(() => {
@@ -46,7 +55,7 @@ export default function Home() {
   return (
     <div>
       <p>Is user coming from instagram? {`${isInstagram}`} </p>
-      {deneme()}
+      <button onClick={startIThrown}>Tap me</button>
     </div>
   )
 }
