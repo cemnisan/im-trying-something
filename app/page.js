@@ -14,11 +14,11 @@ export default function Home() {
 
   function deneme() { 
     if (isInstagram) { 
-      /*let newURL = window.location.href.replace('localhost:3000/', 'localhost:3000/.well-known/apple-app-site-assocation')
-      window.location.replace(newURL) */
-      var change = false 
+      var newURL = window.location.href.replace('https://im-trying-something.vercel.app/', 'bidsee://deneme?q=123')
+      window.location.replace(newURL) 
+      /*var change = false */
 
-      setTimeout(() => {
+      /*setTimeout(() => {
         if (!change) { 
           var redirectURL = "https://im-trying-something.vercel.app/"
           window.location = redirectURL
@@ -36,7 +36,7 @@ export default function Home() {
 
       window.onfocus = function () { 
         change = false;
-      }
+      }*/
 
     } else { 
       // do nothing.
