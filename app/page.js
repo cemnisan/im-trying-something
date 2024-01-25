@@ -25,7 +25,7 @@ export default function Home() {
         }
       }, 3000)
 
-      var newURL = window.location.href.replace('https://im-trying-something.vercel.app/', 'https://im-trying-something.vercel.app/.well-known/apple-app-site-assocation')
+      var newURL = window.location.href.replace('https://im-trying-something.vercel.app/', 'bidsee://deneme?q=123')
       window.location.replace(newURL)
 
 
