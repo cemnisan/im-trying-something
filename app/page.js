@@ -7,6 +7,7 @@ export default function Home() {
   
   useEffect(() => {
     let _isInstagram = navigator.userAgent.includes("instagram")
+    console.log(navigator.userAgent)
     setIsInstagram(_isInstagram)
   })
 
