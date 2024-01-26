@@ -36,7 +36,7 @@ export default function Home() {
       setTimeout(function() {
           // Link to the App Store should go here -- only fires if deep link fails                
           window.location = "https://bidsee.app";
-      }, 100000);
+      }, 500);
   }, []);
 
   function openDeepLink(url, options) {
