@@ -106,7 +106,7 @@ export default function Home() {
   }
 
   function register() {
-     navigator.registerProtocolHandler("bidsee", "https://https://im-trying-something.vercel.app/?uri=%s")
+     navigator.registerProtocolHandler("web+bidsee", "https://im-trying-something.vercel.app/?uri=%s")
   }
 
   return (
