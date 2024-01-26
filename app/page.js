@@ -31,8 +31,6 @@ export default function Home() {
   }, [returnToAppLink]);*/
 
   useEffect(() => {
-    register()
-
     document.getElementById("l").src = url;
 
       setTimeout(function() {
