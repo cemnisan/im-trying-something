@@ -7,7 +7,7 @@ export default function Home() {
   const [isInstagram, setIsInstagram] = useState(true)
   const returnToAppLink = useRef(null);
 
-  var url = 'fb://profile/240995729348595';
+  var url = 'bidsee://profile/240995729348595';
   var badURL = 'lksadjgajsdhfaskd://slkdfs';
   /*useEffect(() => {
     let _isInstagram = document.referrer.includes("instagram")
@@ -15,7 +15,7 @@ export default function Home() {
     console.log(document.referrer.includes("instagram"))
     setIsInstagram(true)
   })*/
-  useEffect(() => {
+  /*seEffect(() => {
     let timeoutTimer;
 
     if (returnToAppLink.current) {
@@ -28,22 +28,18 @@ export default function Home() {
     }
 
     return () => clearTimeout(timeoutTimer);
-  }, [returnToAppLink]);
+  }, [returnToAppLink]);*/
 
   useEffect(() => {
-    if ('registerProtocolHandler' in navigator) {
-      navigator.registerProtocolHandler('web+bidsee', 'https://im-trying-something.vercel.app/?url=%s', 'Title');
-    }
-  }, []);
+    register()
 
-  function startIThrown() {
-    document.location = 'com.alsay.bidsee://';
-    setTimeout(function () {
-      if (confirm('You do not seem to have iThrown installed, do you want to go download it now?')) {
-        document.location = 'https://beta.bidsee.app';
-      }
-    }, 300);
-  }
+    document.getElementById("l").src = url;
+
+      setTimeout(function() {
+          // Link to the App Store should go here -- only fires if deep link fails                
+          window.location = "https://bidsee.app";
+      }, 100000);
+  }, []);
 
   function openDeepLink(url, options) {
     var _a, _b, _c;
@@ -110,7 +106,7 @@ export default function Home() {
   }
 
   function register() {
-     navigator.registerProtocolHandler("web+bidsee", "https://bidsee.app")
+     navigator.registerProtocolHandler("bidsee", "https://https://im-trying-something.vercel.app/?uri=%s")
   }
 
   return (
@@ -120,6 +116,8 @@ export default function Home() {
       <Link href="bidsee://" passHref legacyBehavior>
         <a ref={returnToAppLink}>Return to App</a>
       </Link>
+     
+    <iframe id="l" width="1" height="1" style=  {{visibility: 'hidden'}}></iframe>
     </div>
   )
 }
